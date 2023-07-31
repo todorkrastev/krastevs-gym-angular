@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent {
+  ongoingTraining: boolean = false;
+
 
 }
