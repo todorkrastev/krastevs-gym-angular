@@ -21,5 +21,8 @@
     <li>
       <a href="https://firebase.google.com/docs?gad=1&gclid=Cj0KCQjwoK2mBhDzARIsADGbjerLuVR-zllX48WWBYdQYhdBH2w6vgWyHH1Z9nS2fIVoxcsWJ3mCChoaAuGSEALw_wcB&gclsrc=aw.ds" target="_blank">Firebase</a>
     </li>
+    <li>
+      <a href="https://github.com/ReactiveX/rxjs" target="_blank">RxJS</a>
+    </li>
   </ul>
 </div>
