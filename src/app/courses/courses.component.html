@@ -10,24 +10,29 @@
         <mat-cell *matCellDef="let element">{{ element.date.toDate() | date }}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.name }}</mat-cell>
+    <ng-container matColumnDef="time">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Time</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.time }}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="calories">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>Calories</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.calories | number }}</mat-cell>
+    <ng-container matColumnDef="activity">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Activity</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.activity }}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="duration">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Duration</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.duration | number }}</mat-cell>
+        <mat-cell *matCellDef="let element">{{ element.duration }}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="state">
-        <mat-header-cell *matHeaderCellDef mat-sort-header>State</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{ element.state }}</mat-cell>
+    <ng-container matColumnDef="trainer">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Trainer</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.trainer }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="room">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>Room</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{ element.room }}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>

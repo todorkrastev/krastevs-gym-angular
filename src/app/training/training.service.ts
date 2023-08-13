@@ -1,4 +1,4 @@
-import { Subject, Subscription, catchError, map } from "rxjs";
+import { Subject, Subscription, map } from "rxjs";
 import { Exercise } from "./exercise.model";
 import { Injectable } from "@angular/core";
 import { AngularFirestore } from "@angular/fire/compat/firestore";

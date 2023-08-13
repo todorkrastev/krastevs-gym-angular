@@ -16,13 +16,18 @@ import { environment } from '../environments/environment';
 import { UIService } from './shared/ui.service';
 import { AuthModule } from './auth/auth.module';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { CoursesService } from './courses/courses.service';
+import { CoursesModule } from './courses/courses.module';
+import { FooterComponent } from './footer/footer.component';
+import { ActivityService } from './welcome/activity.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,12 +37,15 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    CoursesModule
   ],
   providers: [
     AuthService,
     TrainingService,
-    UIService
+    UIService,
+    CoursesService,
+    ActivityService
   ],
   bootstrap: [AppComponent]
 })

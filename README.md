@@ -26,3 +26,11 @@
     </li>
   </ul>
 </div>
+
+<h3>Krastev's Gym App is deployed on:</h3>
+<div>
+  <ul>
+    <li>
+      <a href="https://krastevs-gym-angular.firebaseapp.com/" target="_blank">Firebase</a>
+    </li>
+</div>

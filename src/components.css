@@ -1,0 +1,10 @@
+/* Divider --------- */
+.divider {
+    background-color: var(--color-dark-gray);
+    height: 5px;
+}
+
+/* Section --------- */
+.section {
+    padding: 3rem 1rem;
+}

@@ -1,14 +1,24 @@
-<div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayout.gt-md="20px" fxLayoutAlign="center center">
-    <section>
-        <h1>Lorem ipsum dolor</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<main>
+  <section id="hero">
+    <img src="../../assets/hero.jpg" class="img--bg" alt="Background poster" />
+
+    <h1 class="hero__title">NO EXCUSES!</h1>
+    <h2 class="hero__subtitle">GET FIT NOW</h2>
+  </section>
+
+  <div *ngFor="let activity of activities; index as i">
+    <div class="divider"></div>
+    <section class="info section">
+      <div class="info__wrapper">
+        <h2 class="info__title"> {{activity.title}} </h2>
+        <p class="info__description">
+          {{activity.description}}
+        </p>
+      </div>
+      <img class="info__poster" [src]="activities[i].image" />
     </section>
-    <section>
-        <h1>Lorem ipsum dolor</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-    </section>
-    <section>
-        <h1>Lorem ipsum dolor</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-    </section>
-</div>
+  </div>
+
+
+
+</main>

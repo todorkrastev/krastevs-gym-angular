@@ -5,8 +5,6 @@ import { TrainingService } from '../training.service';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { Subscription } from 'rxjs';
-import { CurrencyPipe } from '@angular/common';
-import { NumberValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-past-trainings',

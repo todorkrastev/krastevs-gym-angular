@@ -1,4 +1,4 @@
-<section class="signup-form">
+<section class="signup"  fxLayoutAlign="center center">
     <form 
     fxLayout="column" 
     fxLayoutAlign="center center" 
@@ -47,9 +47,9 @@
         type="submit" 
         mat-raised-button 
         [disabled]="f.invalid" 
-        color="accent">Submit</button>
+        color="primary">Submit</button>
         <mat-spinner 
         *ngIf="isLoading"
-        color="warn"></mat-spinner>
+        color="primary"></mat-spinner>
     </form>
 </section>

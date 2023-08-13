@@ -1,6 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url("https://use.fontawesome.com/releases/v5.10.2/css/all.css");
+@import url("./reset.css");
+@import url("./typography.css");
+@import url("./components.css");
 
-html, body { height: 100%; }
+html, body { 
+  background-color: black;
+  height: 100%; 
+}
+
+:root {
+  --color-primary: #ffdd4d;
+  --color-light-yellow: #ffec9c;
+  --color-white: #fff;
+  --color-dark-gray: #222222;
+  --color-black: black;
+  /*
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-large: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    */
+}
+
+
+/*
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*/
+

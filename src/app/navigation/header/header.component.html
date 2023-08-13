@@ -1,11 +1,13 @@
-<mat-toolbar color="accent">
-    <div fxHide.gt-xs>
-        <button mat-icon-button (click)="onToggleSidenav()">
-            <mat-icon>menu</mat-icon>
-        </button>
+<mat-toolbar color="primary">
+    <div >
+        <a fxLayoutAlign="center center" routerLink="/" class="logo-a">
+            <img src="../../../assets/logo.png" class="logo" alt="Logo" />
+        </a>
     </div>
-    <div>
-        <a routerLink="/">Logo</a>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.gt-xs>
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon class="menu">menu</mat-icon>
+        </button>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
         <ul fxLayout fxLayoutGap="10px" class="navigation-items">
@@ -14,6 +16,9 @@
             </li>
             <li *ngIf="!isAuth">
                 <a routerLink="/login">Login</a>
+            </li>
+            <li *ngIf="isAuth">
+                <a routerLink="/courses">Courses</a>
             </li>
             <li *ngIf="isAuth">
                 <a routerLink="/training">Training</a>
