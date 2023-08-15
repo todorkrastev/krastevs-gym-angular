@@ -19,7 +19,6 @@ export class TrainingService {
 
     fetchAvailableExercises() {
         this.uiService.loadingStateChanged.next(true);
-        debugger;
         this.fbSubs
             .push(this.db
                 .collection("availableExercises")
@@ -40,13 +39,11 @@ export class TrainingService {
                     }))
                 .subscribe(/*(exercises: Exercise[]) =>*/ {
                     next: (exercises) => {
-                        debugger;
                         this.uiService.loadingStateChanged.next(false);
                         this.availableExercises = exercises;
                         this.exercisesChanged.next([...this.availableExercises]);
                     },
                     error: (error) => {
-                        debugger;
                         this.uiService.loadingStateChanged.next(false);
                         this.uiService.showSnackbar('Fetching exercises failed, please try again later', undefined, 7000);
                         this.exerciseChanged.next(null);
@@ -55,7 +52,6 @@ export class TrainingService {
     }
 
     startExercise(selectedId: string) {
-        debugger;
         // this.db.doc('availableExercises/' + selectedId).update({lastSelected: new Date()});
         // this.db.doc('availableExercises/' + selectedId).delete();
 
@@ -66,7 +62,6 @@ export class TrainingService {
     }
 
     completeExercise() {
-        debugger;
         this.addDataToDatabase({
             ...this.runningExercise,
             date: new Date(),
@@ -77,7 +72,6 @@ export class TrainingService {
     };
 
     cancelExercise(progress: number) {
-        debugger;
         this.addDataToDatabase({
             ...this.runningExercise,
             duration: this.runningExercise.duration * (progress / 100),

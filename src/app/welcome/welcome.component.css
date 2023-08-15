@@ -38,6 +38,7 @@
 #hero .hero__subtitle {
   position: relative;
   z-index: 3;
+  text-transform: uppercase;
 }
 
 #hero .hero__title {
@@ -48,6 +49,22 @@
 
 #hero .hero__subtitle {
   font-size: 1.25rem;
+}
+
+#hero .buttons {
+  z-index: 3;
+  padding: 0.625rem 0;
+}
+
+#hero .member__btn {
+  background-color: var(--color-primary);
+  color: var(--color-dark-gray);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border: 2px solid transparent;
 }
 
 /* Basic information section layout */
@@ -245,6 +262,14 @@
 }
 
 @media screen and (min-width: 1200px) {
+  #hero .member__btn:hover {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+    transition: color 250ms ease-in-out;
+  }
+  
   .footer .navi .navi-group__subtitle:hover {
     color: var(--color-primary);
     cursor: pointer;

@@ -17,7 +17,6 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger;
     this.startOrResumeTimer();
   }
 
@@ -33,7 +32,6 @@ export class CurrentTrainingComponent implements OnInit {
   }
 
   onStop() {
-    debugger;
     clearInterval(this.timer);
     const dialogRef = this.dialog.open(StopTrainingComponent, {
       data: {

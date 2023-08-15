@@ -21,12 +21,10 @@ export class CoursesService {
       .valueChanges()
       .subscribe({
         next: (courses: Course[] | any) => {
-          debugger;
           this.uiService.loadingStateChanged.next(false);
           this.availableCourses.next(courses);
         },
         error: (error) => {
-          debugger;
           this.uiService.loadingStateChanged.next(false);
           this.uiService.showSnackbar('Fetching exercises failed, please try again later', undefined, 7000);
         }

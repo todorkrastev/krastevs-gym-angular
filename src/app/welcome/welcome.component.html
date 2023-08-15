@@ -2,8 +2,17 @@
   <section id="hero">
     <img src="../../assets/hero.jpg" class="img--bg" alt="Background poster" />
 
-    <h1 class="hero__title">NO EXCUSES!</h1>
-    <h2 class="hero__subtitle">GET FIT NOW</h2>
+    <h1 class="hero__title">no excuses!</h1>
+    <h2 class="hero__subtitle">get fit now</h2>
+
+    <div class="buttons">
+      <a routerLink="/signup" class="member__btn btn" *ngIf="!isAuth">
+        get started >
+      </a>
+      <a routerLink="/training" class="member__btn btn" *ngIf="isAuth">
+        start a training >
+      </a>
+    </div>
   </section>
 
   <div *ngFor="let activity of activities; index as i">
